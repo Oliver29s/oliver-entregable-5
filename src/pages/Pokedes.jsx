@@ -16,23 +16,23 @@ const Pokedes = () => {
   }, []);
 
   return (
-    <div> 
-      <header>
-        <img src="/imagenes/Diagram-React.png" alt="" />
+    <>
+      <header className="header">
+        <div className="contain__img">
+          <img src="/imagenes/Diagram-React.png" alt="" />
+        </div>
       </header>
-      <h1>
-        <span>Hi {nameTrainer}</span>, here find yor favorite pokemon
-      </h1>
-      <div>
-        {
-          pokemons?.results.map(pokemon =>(
-            <PokerCard key={pokemon.url} 
-            pokemon={pokemon}
-            />
-          )) 
-        }
+      <div className="contain__trainer">
+        <h1 className="h1__title">
+          <span className="span__title">Hi {nameTrainer}</span>, here find yor favorite pokemon
+        </h1>
       </div>
-    </div>
+      <div className="contain__cards">
+        {pokemons?.results.map((pokemon) => (
+          <PokerCard key={pokemon.url} pokemon={pokemon} />
+        ))}
+      </div>
+    </>
   );
 };
 

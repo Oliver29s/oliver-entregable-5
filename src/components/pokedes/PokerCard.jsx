@@ -12,8 +12,8 @@ const PokerCard = ({ pokemon }) => {
   }, []);
   console.log(endPointPokemon);
   return (
-    <div>
-      <header>
+    <div className="poke__cards">
+      <header className="poke__header">
         <img
           src={endPointPokemon?.sprites.other["official-artwork"].front_default}
           alt=""
