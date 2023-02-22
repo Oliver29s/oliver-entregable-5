@@ -3,10 +3,11 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import ProtectedRoute from './pages/ProtectedRoute'
 import Pokedes from './pages/Pokedes'
+import hidden from './store/slices/hidden'
 
 function App() {
 
-
+console.log(hidden)
  
   return (
     <div className="App">

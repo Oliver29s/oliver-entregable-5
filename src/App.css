@@ -2,6 +2,53 @@
   min-height: 100vh;
 }
 
+.contain__home {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+.contain__home h2 {
+  color: rgb(255, 68, 0);
+}
+
+.form__home > button,
+input {
+  font-size: 20px;
+  padding: 0.3rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.form__home > button {
+  border-radius: 0 1rem 1rem 0;
+  background-color: rgb(255, 68, 0);
+  color: beige;
+}
+
+.form__home > input {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.footer__home {
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.footer__home img {
+  height: 100%;
+}
+
+.img__home {
+  width: 100%;
+  max-width: 400px;
+  max-height: 250px;
+}
+
 .header {
   width: 100%;
   overflow: hidden;
@@ -22,18 +69,52 @@
   width: 100%;
 }
 
-.h1__title{
-    text-align: center;
+.h1__title {
+  text-align: center;
 }
 
-.span__title{
-    color:rgb(230, 71, 32) ;
+.span__title {
+  color: rgb(230, 71, 32);
 }
 
-.contain__cards{
-    padding: 1rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    max-width: 1024px;
+.contain__cards {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.poke__cards {
+  background-color: aqua;
+}
+
+h2{
+  text-align: center;
+}
+
+.poke__header {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.poke__cards ul {
+  list-style: none;
+}
+
+.poke__header img {
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.contain__endpoint{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.contain__endpoint > ul {
+  background-color: aquamarine;
+  margin: 5px;
 }
