@@ -1,0 +1,21 @@
+.header_shared{
+    background-image: url(../../../public/imagenes/Group-217.png);
+    height: 20vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    object-fit: contain;
+}
+
+.div__header{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div__header img{
+    max-height: 100px;
+
+}

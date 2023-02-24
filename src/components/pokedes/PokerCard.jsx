@@ -43,7 +43,7 @@ const PokerCard = ({ pokemon }) => {
 
         <div className="ul__poke">
           {endPointPokemon?.stats?.map((stat) => (
-            <p key={stat.stat.url} className="li_poke">
+            <p key={stat.stat.name} className="li_poke">
               <span>{stat.stat.name}</span>
               <span className="stat__poke">{stat.base_stat}</span>
             </p>

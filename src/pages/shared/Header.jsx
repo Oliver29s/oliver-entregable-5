@@ -1,9 +1,13 @@
 import React from 'react'
+import '../styles/header.css'
 
 const Header = () => {
   return (
     <header className='header_shared'>
-        <img src="" alt="" />
+      <div className='div__header'>
+
+        <img src="/imagenes/image-12.png" alt="logo" />
+      </div>
     </header>
   )
 }
