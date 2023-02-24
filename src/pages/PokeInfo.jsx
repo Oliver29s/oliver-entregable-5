@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import hidden from "../store/slices/hidden";
+import "./styles/pokeInfo.css"
 
 const PokeInfo = () => {
   const { id } = useParams();
@@ -18,38 +19,54 @@ const PokeInfo = () => {
   console.log(poke);
 
   return (
-    <div className="info__contain">
-      <div>
+    <main className={`main__info ${poke?.types[0].type.name}`}>
+
+    <div className={`info__contain ${poke?.types[0].type.name}` } >
+      <div className={`info__title ${poke?.types[0].type.name}`}>
         <img src={hidden} alt="" />
         <img
           src={poke?.sprites.other["official-artwork"].front_default}
           alt=""
         />
-        <div>
-          <p>Weight {poke?.weight}</p>
-          <p>Height{poke?.height}</p>
-          <h3>{poke?.name}</h3>
+        <div className="info__name">
+          <p> {poke?.weight} <span>Weight</span></p>
+          <p>{poke?.height}<span>Height</span></p>
+          
         </div>
+        <h3>{poke?.name}</h3>
       </div>
-      <section>
+      <section className="section__all">
+
+      <section className={`section__info ${poke?.types[0].type.name}`}>
         <h3>Types</h3>
-        <div>{poke?.types[0].type.name}</div>
-        <div>{poke?.types[1].type.name}</div>
+        <div className="type">
+
+        <div className="type__0 rock">{poke?.types[0]?.type.name}</div>
+        <div className="type__1 steel" >{poke?.types[1]?.type.name}</div>
+        </div>
       </section>
-      <article>
+      <article  className={`section__info ${poke?.types[0].type.name}`} >
         <h3>Abilities</h3>
-        <div>{poke?.abilities[0].ability.name}</div>
-        <div>{poke?.abilities[1].ability.name}</div>
+        <div className="type">
+
+        <div className="type__0 rock">{poke?.abilities[0]?.ability.name}</div>
+        <div className="type__1 steel">{poke?.abilities[1]?.ability.name}</div>
+        </div>
       </article>
-      <div>
-        <h3>Stat</h3>
+      <div className={`section__info ${poke?.types[0].type.name}`}>
+        <h3>Stats</h3>
+        <div className="stat__info">
+          
         {poke?.stats?.map((stat) => (
           <p key={stat.stat.url}>{stat.stat.name}
-          {}
+          
           </p>
         ))}
+        </div>
       </div>
+      </section>
     </div>
+    </main>
   );
 };
 
