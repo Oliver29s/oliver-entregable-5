@@ -8,7 +8,7 @@ const Pokedes = () => {
   const [pokemons, setpokemons] = useState();
 
   useEffect(() => {
-    const url = "https://pokeapi.co/api/v2/pokemon?limit=5&offset=0";
+    const url = "https://pokeapi.co/api/v2/pokemon?limit=250&offset=0";
     axios
       .get(url)
       .then((res) => setpokemons(res.data))
